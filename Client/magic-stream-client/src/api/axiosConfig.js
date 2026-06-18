@@ -1,8 +1,15 @@
 import axios from "axios";
 
-const axiosClient = axios.create({
-  baseURL: "https://cine-stream-backend-hqiu.onrender.com",
-  withCredentials: true,
+// Highlight-start
+const BASE_URL = "https://cine-stream-backend-hqiu.onrender.com";
+// Highlight-end
+
+export default axios.create({
+  baseURL: BASE_URL,
 });
 
-export default axiosClient;
+export const axiosPrivate = axios.create({
+  baseURL: BASE_URL,
+  headers: { "Content-Type": "application/json" },
+  withCredentials: true, // Crucial for sending your cookies/tokens to Render!
+});
