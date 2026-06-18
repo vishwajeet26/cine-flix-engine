@@ -1,8 +1,8 @@
-import axios from 'axios';
-const apiUrl = import.meta.env.VITE_API_BASE_URL;
+import axios from "axios";
 
-export default axios.create({
-    baseURL:apiUrl,
-    headers:{'Content-Type':'application/json'},
-    withCredentials: true,
-})
+const axiosClient = axios.create({
+  baseURL: "https://cine-stream-backend-hqiu.onrender.com",
+  withCredentials: true,
+});
+
+export default axiosClient;
