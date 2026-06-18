@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import useAuth from './useAuth';
 
-const apiUrl = import.meta.env.VITE_API_BASE_URL;
+const apiUrl = "https://cine-stream-backend-hqiu.onrender.com";
 
 const useAxiosPrivate = () =>{
 
